@@ -11,11 +11,11 @@ CREATE TABLE BankAccounts
   AcctName char(15),
   Balance money,
   ModifiedDate date)
-GO
+
 
 INSERT INTO Accounting.BankAccounts
 VALUES('Jack',500, GETDATE())
 INSERT INTO Accounting.BankAccounts
-VALUES('Diane', 750, GETDATE())
+VALUSE('Diane', 750, GETDATE())
 GO
 

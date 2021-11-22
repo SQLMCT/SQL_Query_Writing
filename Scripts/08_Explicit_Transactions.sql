@@ -1,4 +1,4 @@
---Explicit Transaction with Error Handling
+--Explicit Transaction without Error Handling
 --IF needed, Run 04_Create_BankAccounts_Table.sql
 
 USE AdventureWorks2016

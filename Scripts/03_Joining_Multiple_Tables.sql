@@ -2,14 +2,13 @@ USE AdventureWorks2016
 GO
 --Use Tables that are included with the AdventureWorksLT database
 --Joining Muliple Tables
-SELECT C.CustomerID, C.CompanyName, 
-	SOD.SalesOrderID, OrderDate, 
-	OrderQty, TotalDue
-FROM SalesLT.Customer AS C
-	JOIN SalesLT.SalesOrderHeader AS SOH
-		ON C.CustomerID = SOH.CustomerID
-	JOIN SalesLT.SalesOrderDetail AS SOD
-		ON SOH.SalesOrderID = SOD. SalesOrderID
+SELECT SOH.SalesOrderID, SOH.CustomerID,
+	OrderQty, UnitPrice, P.Name
+FROM Sales.SalesOrderHeader AS SOH
+	JOIN Sales.SalesOrderDetail AS SOD
+		ON SOH.SalesOrderID = SOD.SalesOrderID
+	JOIN Production.Product AS P
+		ON P.ProductID = SOD.ProductID
 
 --Run 03_Create_Join_Demo_Tables.sql script found at
 --https://github.com/SQLMCT/SQLSlides
