@@ -6,7 +6,7 @@ SELECT * FROM Person.Person
 
 --It is best practice to choose specific columns
 --For performance only retrieve what you need.
-SELECT FirstName, LastName
+select firstname, lastname
 FROM Person.Person
 
 --You can also sort your results with an OrderBy statement
@@ -15,7 +15,7 @@ FROM Person.Person
 ORDER BY LastName DESC, FirstName ASC
 
 --Filtering Records for a single row (Numbers)
-SELECT FirstName, LastName
+SELECT BusinessEntityID, FirstName, LastName
 FROM Person.Person
 WHERE BusinessEntityID = 4
 
@@ -33,11 +33,12 @@ WHERE BusinessEntityID IN (4, 6)
 SELECT FirstName, LastName
 FROM Person.Person
 WHERE LastName = 'Gates'
-
+/*
 --Filtering using the LIKE statement and %
 SELECT FirstName, LastName
 FROM Person.Person
 WHERE LastName LIKE 'G%'
+*/
 
 --Filtering using the LIKE statement and _
 SELECT FirstName, LastName

@@ -1,6 +1,6 @@
 USE AdventureWorks2016
 GO
---Use Tables that are included with the AdventureWorksLT database
+--Use Tables that are included with the AdventureWorks database
 --Joining Muliple Tables
 SELECT SOH.SalesOrderID, SOH.CustomerID,
 	OrderQty, UnitPrice, P.Name
